@@ -14,7 +14,6 @@ const creatDivElementmarkup = galleryItems.map(({preview, original, description}
 galleryEl.insertAdjacentHTML('afterbegin', creatDivElementmarkup);
 console.log(galleryItems);
 
-let gallery = new SimpleLightbox('.gallery a');
-gallery.on('show.simplelightbox', function () {
-    captionDelay = 250;
+let gallery = new SimpleLightbox('.gallery a', {
+    captionDelay: 250
 });
